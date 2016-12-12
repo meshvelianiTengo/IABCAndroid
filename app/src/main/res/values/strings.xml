@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">IABCAndroid</string>
+    <string name="skip">SKIP</string>
 </resources>

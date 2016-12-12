@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CtextViewStyle">
+        <attr name="font_name" format="enum">
+            <enum name="AVERNIR_NEXT" value="0"/>
+            <enum name="HELVETICA" value="1"/>
+
+        </attr>
+        <attr name="xTextSize" format="float"/>
+        <attr name="plusTextSize" format="integer"/>
+    </declare-styleable>
+</resources>
