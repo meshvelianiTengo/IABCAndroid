@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import iabc.com.voli.iabcandroid.R
-import iabc.com.voli.iabcandroid.models.HomeFragmentModel
+import iabc.com.voli.iabcandroid.models.HomeFragmentMovieModel
 import iabc.com.voli.iabcandroid.ui.adapters.HomePageAdapter
 import kotlinx.android.synthetic.main.fragment_home.*
 import java.util.*
@@ -21,7 +21,7 @@ class HomeFragment : BaseFragment(){
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val adapter = HomePageAdapter(context, ArrayList<HomeFragmentModel>())
+        val adapter = HomePageAdapter(context, ArrayList<HomeFragmentMovieModel>())
         pager.adapter = adapter
         pager.setPageTransformer(false, adapter);
 

@@ -7,13 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import iabc.com.voli.iabcandroid.R
-import iabc.com.voli.iabcandroid.models.HomeFragmentModel
+import iabc.com.voli.iabcandroid.models.HomeFragmentMovieModel
 import iabc.com.voli.iabcandroid.ui.custom.MyLinearLayout
 
 /**
  * Created by tengo on 12/13/16.
  */
-class HomePageAdapter (private val context: Context, private val models: List<HomeFragmentModel>) : PagerAdapter(), ViewPager.PageTransformer {
+class HomePageAdapter (private val context: Context, private val models: List<HomeFragmentMovieModel>) : PagerAdapter(), ViewPager.PageTransformer {
 
     companion object {
         const val BIG_SCALE = 1.0f
@@ -39,7 +39,7 @@ class HomePageAdapter (private val context: Context, private val models: List<Ho
     }
 
     override fun getPageWidth(position: Int): Float {
-        return 0.4f
+        return 0.3f
     }
 
     override fun destroyItem(collection: ViewGroup, position: Int, view: Any) {

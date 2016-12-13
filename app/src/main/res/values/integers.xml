@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer name="plus_text_size_for_18">4</integer>
+    <integer name="plus_text_size_for_16">2</integer>
     <integer name="plus_text_size_for_13">0</integer>
 
 
