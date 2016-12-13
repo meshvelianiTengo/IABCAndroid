@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<iabc.com.voli.iabcandroid.ui.custom.MyLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/adapter_item_home_page_root"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    app:layout_anchorGravity="center"
+    android:background="@color/white"
+    android:gravity="center"
+    >
+
+    <ImageView
+        android:src="@mipmap/into_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <iabc.com.voli.iabcandroid.ui.custom.CTextView
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text=";djasfm;as"
+        app:plusTextSize="@integer/plus_text_size_for_13"
+        />
+
+
+</iabc.com.voli.iabcandroid.ui.custom.MyLinearLayout>

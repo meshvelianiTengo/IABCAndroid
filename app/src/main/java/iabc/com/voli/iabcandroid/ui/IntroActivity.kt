@@ -3,7 +3,6 @@ package iabc.com.voli.iabcandroid.ui
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.TabLayout
 import android.support.v7.app.AppCompatActivity
 import android.util.DisplayMetrics
 import iabc.com.voli.iabcandroid.R
@@ -49,10 +48,11 @@ class IntroActivity : AppCompatActivity() , IntroActivityView{
         setTheme(R.style.AppTheme)
         setContentView(R.layout.activity_intro)
         act_intro_pager.adapter = IntroActivityPagerAdapter(this, list)
-//        val viewPager = findViewById(R.id.act_intro_pager) as ViewPager
-//        viewPager.adapter = IntroActivityPagerAdapter(this, list)
+        act_intro_tablayout.setupWithViewPager(act_intro_pager, true)
 
-        (findViewById(R.id.act_intro_tablayout) as TabLayout).setupWithViewPager(act_intro_pager, true)
+        act_intro_skip.setOnClickListener { onPushMain() }
+
+
     }
 
 
@@ -60,4 +60,6 @@ class IntroActivity : AppCompatActivity() , IntroActivityView{
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
+
+
 }
