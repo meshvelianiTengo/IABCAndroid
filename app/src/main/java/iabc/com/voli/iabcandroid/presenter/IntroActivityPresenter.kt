@@ -7,7 +7,7 @@ import java.util.*
 /**
  * Created by tengo on 12/12/16.
  */
-class IntroActivityPresenter(val view: IntroActivityView) {
+class IntroActivityPresenter(val view: IntroActivityView) : BasePresenter(){
 
 
     fun checkFirstLaunch(){

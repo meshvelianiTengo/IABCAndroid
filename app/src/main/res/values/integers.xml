@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer name="plus_text_size_for_18">4</integer>
-    <integer name="plus_text_size_for_16">2</integer>
+    <integer name="plus_text_size_for_18">5</integer>
+    <integer name="plus_text_size_for_17">4</integer>
+    <integer name="plus_text_size_for_16">3</integer>
+    <integer name="plus_text_size_for_15">2</integer>
+    <integer name="plus_text_size_for_14">1</integer>
     <integer name="plus_text_size_for_13">0</integer>
+    <integer name="plus_text_size_for_12">-1</integer>
 
 
 </resources>
