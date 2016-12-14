@@ -9,7 +9,10 @@ import iabc.com.voli.iabcandroid.makeToast
 import iabc.com.voli.iabcandroid.models.HomeFragmentMovieModel
 import iabc.com.voli.iabcandroid.models.HomeFragmentSliderModel
 import iabc.com.voli.iabcandroid.presenter.HomeFragmentPresenter
+import iabc.com.voli.iabcandroid.ui.adapters.HomePageAdapter
+import iabc.com.voli.iabcandroid.ui.adapters.HomePageSliderAdapter
 import iabc.com.voli.iabcandroid.view.HomeFragmentView
+import kotlinx.android.synthetic.main.fragment_home.*
 
 
 /**
@@ -31,10 +34,14 @@ class HomeFragment : BaseFragment(), HomeFragmentView{
         super.onViewCreated(view, savedInstanceState)
         presenter.startGettingDesctiption()
         presenter.startGettingMovies()
+
+        home_fr_more.setOnClickListener { onMoreClicked() }
     }
 
+    //ovveriding home fragment view functions : start
     override fun onDescriptionReceived(list: List<HomeFragmentSliderModel>) {
-        throw UnsupportedOperationException("not implemented") //To change body of created functions use File | Settings | File Templates.
+        home_fr_top_pager.adapter = HomePageSliderAdapter(context, list)
+        home_fr_tablayout.setupWithViewPager(home_fr_top_pager, true)
     }
 
     override fun onDescriptionError(msg: String) {
@@ -42,10 +49,21 @@ class HomeFragment : BaseFragment(), HomeFragmentView{
     }
 
     override fun onMoviesResponse(list: List<HomeFragmentMovieModel>) {
-        throw UnsupportedOperationException("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val adapter = HomePageAdapter(context, list)
+        home_fr_movie_pager.adapter = adapter
+        home_fr_movie_pager.setPageTransformer(true, adapter)
+
     }
 
     override fun onMoviesError(msg: String) {
         makeToast(msg)
     }
+    //ovveriding home fragment view functions : end
+
+    //override func end
+
+    fun onMoreClicked(){
+        throw UnsupportedOperationException("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <ImageView
+        android:id="@+id/adapter_home_fr_slider_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@mipmap/into_image"
+        />
+    
+    <iabc.com.voli.iabcandroid.ui.custom.CTextView
+        android:id="@+id/adapter_home_fr_slider_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/_282828"
+        android:ellipsize="end"
+        app:font_name="AVERNIR_NEXT"
+        app:plusTextSize="@integer/plus_text_size_for_12"
+
+        />
+
+</LinearLayout>
