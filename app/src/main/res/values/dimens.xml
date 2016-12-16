@@ -3,4 +3,6 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="act_intro_tab_button_thickness">5dp</dimen>
+    <dimen name="home_page_cover_height">150dp</dimen>
+    <dimen name="home_page_cover_width">100dp</dimen>
 </resources>

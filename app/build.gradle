@@ -40,6 +40,7 @@ dependencies {
 
     testCompile 'junit:junit:4.12'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile 'com.github.moondroid.coverflow:library:1.0'
 }
 repositories {
     mavenCentral()

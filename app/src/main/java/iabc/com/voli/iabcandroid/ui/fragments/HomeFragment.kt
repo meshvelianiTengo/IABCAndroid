@@ -9,7 +9,7 @@ import iabc.com.voli.iabcandroid.makeToast
 import iabc.com.voli.iabcandroid.models.HomeFragmentMovieModel
 import iabc.com.voli.iabcandroid.models.HomeFragmentSliderModel
 import iabc.com.voli.iabcandroid.presenter.HomeFragmentPresenter
-import iabc.com.voli.iabcandroid.ui.adapters.HomePageAdapter
+import iabc.com.voli.iabcandroid.ui.adapters.ControlFlowAdapter
 import iabc.com.voli.iabcandroid.ui.adapters.HomePageSliderAdapter
 import iabc.com.voli.iabcandroid.view.HomeFragmentView
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -49,9 +49,9 @@ class HomeFragment : BaseFragment(), HomeFragmentView{
     }
 
     override fun onMoviesResponse(list: List<HomeFragmentMovieModel>) {
-        val adapter = HomePageAdapter(context, list)
-        home_fr_movie_pager.adapter = adapter
-        home_fr_movie_pager.setPageTransformer(true, adapter)
+        val adapter = ControlFlowAdapter(context, list)
+        home_page_control_flow.adapter = adapter
+//        home_fr_movie_pager.setPageTransformer(true, adapter)
 
     }
 
