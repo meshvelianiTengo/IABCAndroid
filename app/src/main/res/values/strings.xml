@@ -3,4 +3,5 @@
     <string name="skip">SKIP</string>
     <string name="fragment_home_ranked_movies">Ranked movies</string>
     <string name="home_fragment_more">More</string>
+    <string name="app_def_text_short">abcd</string>
 </resources>

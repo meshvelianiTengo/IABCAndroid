@@ -12,7 +12,7 @@ import java.util.*
 class HomeFragmentInteractor {
 
     companion object{
-        const val DEF_IMAGE_URL = "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRuhO9tzTHjJI39XEduni7DFbmBXWlHn6s_4K58J8mYdUwofoCr3Q"
+        const val DEF_IMAGE_URL = "http://www.ssaurel.com/tmp/logo_ssaurel.png"
     }
 
     fun startGettingHomeFragmentDescriptions(callback: HomeFragmentInteractorDescriptionCallback) {
@@ -26,11 +26,7 @@ class HomeFragmentInteractor {
     }
 
     fun startGettingHomeFragmentRankedMovies(callback: HomeFragmentInteractorMoviesCallback){
-        val retList = ArrayList<HomeFragmentMovieModel>()
-        for(i in 1..8){
-            val item = HomeFragmentMovieModel(image= DEF_IMAGE_URL, title = "title = " +i)
-            retList.add(item)
-        }
+        val retList = (1..8).map { HomeFragmentMovieModel(image= DEF_IMAGE_URL, title = "title = " + it) }
         callback.onMoviesDownloaded(retList)
     }
 }

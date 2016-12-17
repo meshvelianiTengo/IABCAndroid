@@ -7,6 +7,9 @@
     <integer name="plus_text_size_for_14">1</integer>
     <integer name="plus_text_size_for_13">0</integer>
     <integer name="plus_text_size_for_12">-1</integer>
+    <integer name="plus_text_size_for_11">-1</integer>
+    <integer name="plus_text_size_for_10">-1</integer>
+
 
 
 </resources>

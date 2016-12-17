@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:divider="@color/_FAFAFA"
+    >
+    
+    <ImageView
+        android:id="@+id/movie_list_image"
+        android:layout_width="80dp"
+        android:layout_height="140dp"
+        android:src="@drawable/home_fragment_gradient_background_color"
+        android:layout_centerHorizontal="true"
+        />
+
+    <iabc.com.voli.iabcandroid.ui.custom.CTextView
+        android:id="@+id/movie_list_content_type"
+        android:layout_below="@id/movie_list_image"
+        android:layout_alignStart="@id/movie_list_image"
+        android:layout_alignEnd="@id/movie_list_image"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/_909090"
+        android:text="@string/app_def_text_short"
+        app:plusTextSize="@integer/plus_text_size_for_12"
+        />
+
+    <iabc.com.voli.iabcandroid.ui.custom.CTextView
+        android:id="@+id/movie_list_name"
+        android:layout_below="@id/movie_list_content_type"
+        android:layout_alignStart="@id/movie_list_image"
+        android:layout_alignEnd="@id/movie_list_image"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:text="@string/app_def_text_short"
+        app:plusTextSize="@integer/plus_text_size_for_12"
+
+        />
+
+
+
+
+</RelativeLayout>
