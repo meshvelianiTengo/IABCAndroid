@@ -46,7 +46,7 @@ class IntroActivity : AppCompatActivity() , IntroActivityView{
 
 
     override fun onFirstLaunch(list: List<IntroActivityModel> ) {
-        setTheme(R.style.AppTheme)
+        setTheme(R.style.AppTheme_NoActionBar)
         setContentView(R.layout.activity_intro)
         act_intro_pager.adapter = IntroActivityPagerAdapter(this, list)
         act_intro_tablayout.setupWithViewPager(act_intro_pager, true)
