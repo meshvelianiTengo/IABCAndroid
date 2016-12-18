@@ -5,4 +5,6 @@
     <dimen name="act_intro_tab_button_thickness">5dp</dimen>
     <dimen name="home_page_cover_height">150dp</dimen>
     <dimen name="home_page_cover_width">100dp</dimen>
+    <dimen name="navigation_drawer_padding_left">25dp</dimen>
+    <dimen name="navigation_drawer_padding_right">23dp</dimen>
 </resources>
