@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_F9F9F9"
+    >
+
+    <iabc.com.voli.iabcandroid.ui.custom.CTextView
+        android:id="@+id/about_us_pager_item_text"
+        android:layout_width="match_parent"
+        android:background="@color/_F9F9F9"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:plusTextSize="@integer/plus_text_size_for_12"
+        />
+
+</LinearLayout>

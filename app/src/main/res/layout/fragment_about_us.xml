@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/_F9F9F9"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/_F9F9F9"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:background="@color/_F9F9F9"
+
+            >
+
+            <RelativeLayout
+                android:id="@+id/fr_about_us_image_layout"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                >
+
+
+                <ImageView
+                    android:id="@+id/fr_about_us_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/into_image"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/fr_about_us_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/logo"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                >
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/fr_about_us_tablayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    app:tabBackground="@drawable/tab_selector"
+                    app:tabGravity="center"
+                    android:background="@color/_F9F9F9"
+                    android:foregroundGravity="bottom"
+                    app:tabIndicatorHeight="0dp"
+                    />
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/fr_about_us_pager"
+                    android:layout_above="@+id/fr_about_us_tablayout"
+                    android:background="@color/_F9F9F9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentStart="true"
+                    />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/about_us_fr_more_info"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/home_fragment_gradient_background_color"
+                android:orientation="horizontal"
+                android:minWidth="70dp"
+                android:gravity="center"
+                >
+
+                <iabc.com.voli.iabcandroid.ui.custom.CTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:text="@string/fr_about_us_more"
+                    android:gravity="center"
+                    app:plusTextSize="@integer/plus_text_size_for_14"
+                    app:font_name="HELVETICA"
+                    />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/home_fr_more"
+                    android:layout_marginLeft="8dp"
+                    />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/_F4F4F4"
+                />
+
+            <iabc.com.voli.iabcandroid.ui.custom.ContactInfoLayout
+                android:id="@+id/fr_about_us_contact_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

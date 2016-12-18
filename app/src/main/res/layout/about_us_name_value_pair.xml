@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    >
+
+    <iabc.com.voli.iabcandroid.ui.custom.CTextView
+        android:id="@+id/about_us_name_value_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/_726F6F"
+        app:plusTextSize="@integer/plus_text_size_for_12"
+        android:gravity="left|center_vertical"
+        app:font_name="AVERNIR_NEXT"
+
+        />
+
+    <iabc.com.voli.iabcandroid.ui.custom.CTextView
+        android:id="@+id/about_us_name_value_value"
+        android:layout_width="0dp"
+        android:gravity="left|center_vertical"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:textColor="@color/_383838"
+
+        app:plusTextSize="@integer/plus_text_size_for_12"
+        app:font_name="AVERNIR_NEXT"
+        />
+
+
+</LinearLayout>
