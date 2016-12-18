@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.DisplayMetrics
+import android.view.animation.AnimationUtils
 import iabc.com.voli.iabcandroid.R
 import iabc.com.voli.iabcandroid.models.IntroActivityModel
 import iabc.com.voli.iabcandroid.presenter.IntroActivityPresenter
@@ -51,6 +52,11 @@ class IntroActivity : AppCompatActivity() , IntroActivityView{
         act_intro_tablayout.setupWithViewPager(act_intro_pager, true)
 
         act_intro_skip.setOnClickListener { onPushMain() }
+
+        val transAnim = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.anim);
+
+        act_intro_logo.startAnimation(transAnim)
 
 
     }
