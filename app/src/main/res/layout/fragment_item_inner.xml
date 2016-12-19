@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/fr_item_inner_author_layout"
+        android:layout_width="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        >
+
+        <iabc.com.voli.iabcandroid.ui.custom.CTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/_454545"
+            app:plusTextSize="@integer/plus_text_size_for_12"
+            android:text="@string/fr_item_inner_author"
+            />
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            >
+            
+            <ImageView
+                android:id="@+id/fr_item_inner_author_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/_black65"
+                android:layout_centerVertical="true"
+                />
+
+            <LinearLayout
+                android:id="@+id/fr_item_inner_follow_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="1.5dp"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/home_fragment_gradient_background_color"
+                >
+
+                <iabc.com.voli.iabcandroid.ui.custom.CTextView
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/fr_item_inner_rounded_white_color"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:text="@string/fr_item_inner_follow"
+                    android:paddingTop="13dp"
+                    android:paddingBottom="13dp"
+                    android:textColor="@color/_454545"
+                    app:plusTextSize="@integer/plus_text_size_for_12"
+                    />
+
+            </LinearLayout>
+
+
+            <iabc.com.voli.iabcandroid.ui.custom.CTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/fr_item_inner_author_image"
+                android:layout_toLeftOf="@id/fr_item_inner_follow_layout"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/app_def_text_short"
+                android:layout_centerVertical="true"
+
+                />
+            
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_above="@id/fr_item_inner_author_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/_black65"
+                >
+
+                <ImageView
+                    android:id="@+id/fr_item_inner_film_image"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="120dp"
+                    android:layout_height="180dp"
+                    android:background="@color/black"
+                    />
+
+                <LinearLayout
+                    android:layout_alignLeft="@id/fr_item_inner_film_image"
+                    android:layout_below="@id/fr_item_inner_film_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="24dp"
+                    android:paddingBottom="24dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/watch_trailer"
+                        />
+                    
+                    <iabc.com.voli.iabcandroid.ui.custom.CTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/fr_item_inner_watch_trailer"
+                        android:textColor="@color/white"
+                        app:plusTextSize="@integer/plus_text_size_for_12"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/fr_item_inner_film_image"
+                    android:layout_alignTop="@id/fr_item_inner_film_image"
+                    android:paddingLeft="25dp"
+                    android:orientation="vertical"
+                    >
+                    <iabc.com.voli.iabcandroid.ui.custom.CTextView
+                        android:id="@+id/fr_item_inner_title"
+                        style="@style/fragmentInnerItemMovieDescTextStyle"
+                        android:text="@string/app_def_text_short"
+                        app:plusTextSize="@integer/plus_text_size_for_20"
+                        />
+                    
+                    <iabc.com.voli.iabcandroid.ui.custom.CTextView
+                        android:id="@+id/fr_item_inner_genre"
+                        style="@style/fragmentInnerItemMovieDescTextStyle"
+                        android:text="@string/app_def_text_short"
+                        android:layout_marginTop="5dp"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/fr_item_inner_stars"
+                        android:layout_width="50dp"
+                        android:layout_height="20dp"
+                        android:background="@color/white"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        >
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="25dp"
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <iabc.com.voli.iabcandroid.ui.custom.CTextView
+                            android:id="@+id/fr_item_inner_release_date"
+                            style="@style/fragmentInnerItemMovieDescTextStyle"
+                            android:text="@string/fr_item_inner_release_date"
+
+                            />
+
+                    </LinearLayout>
+
+
+                    
+                </LinearLayout>
+
+                <iabc.com.voli.iabcandroid.ui.custom.CTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:orientation="vertical"
+                android:paddingRight="20dp"
+                android:paddingTop="17dp"
+                >
+
+                <iabc.com.voli.iabcandroid.ui.custom.CTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/_2E383D"
+                    android:text="@string/app_def_text_short"
+                    app:plusTextSize="@integer/plus_text_size_for_18"
+                    app:font_name="AVERNIR_NEXT"
+                    />
+
+                <iabc.com.voli.iabcandroid.ui.custom.CTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/_5C5C5C"
+                    android:text="@string/app_def_text_short"
+                    app:font_name="AVERNIR_NEXT"
+                    app:plusTextSize="@integer/plus_text_size_for_12"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <integer name="plus_text_size_for_20">6</integer>
+    <integer name="plus_text_size_for_19">6</integer>
     <integer name="plus_text_size_for_18">5</integer>
     <integer name="plus_text_size_for_17">4</integer>
     <integer name="plus_text_size_for_16">3</integer>

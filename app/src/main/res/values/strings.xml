@@ -17,5 +17,9 @@
     <string name="filter_comix">Comics</string>
     <string name="filter_music_and_sound">Music &amp; sound</string>
     <string name="filter_books">Books</string>
+    <string name="fr_item_inner_author">Author</string>
+    <string name="fr_item_inner_follow">Follow</string>
+    <string name="fr_item_inner_watch_trailer">Watch Trailers</string>
+    <string name="fr_item_inner_release_date">Release year:</string>
 
 </resources>
