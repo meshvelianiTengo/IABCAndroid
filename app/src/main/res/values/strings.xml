@@ -10,4 +10,12 @@
     <string name="mobile">Mobile</string>
     <string name="fr_about_us_more">More IABC Events</string>
     <string name="user_profile">User profile</string>
+    
+    
+    <string name="filter_design">Design</string>
+    <string name="filter_cartoon">Cartoon</string>
+    <string name="filter_comix">Comics</string>
+    <string name="filter_music_and_sound">Music &amp; sound</string>
+    <string name="filter_books">Books</string>
+
 </resources>

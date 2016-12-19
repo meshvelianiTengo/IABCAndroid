@@ -7,4 +7,9 @@
     <dimen name="home_page_cover_width">100dp</dimen>
     <dimen name="navigation_drawer_padding_left">25dp</dimen>
     <dimen name="navigation_drawer_padding_right">23dp</dimen>
+    <dimen name="filter_panel_height">368dp</dimen>
+    <dimen name="custom_choose_item_layout_height">40dp</dimen>
+    <dimen name="custom_choose_item_layout_corner_radius">20dp</dimen>
+    <dimen name="activity_half_horizontal_margin">15dp</dimen>
+    <dimen name="activity_half_vertical_margin">15dp</dimen>
 </resources>

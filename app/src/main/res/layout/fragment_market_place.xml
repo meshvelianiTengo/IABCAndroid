@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/_FAFAFA">
+    android:background="@color/_FAFAFA"
+    >
 
     <ListView
         android:id="@+id/fr_market_place_list"
@@ -19,4 +20,9 @@
 
     </ListView>
 
-</LinearLayout>
+    <iabc.com.voli.iabcandroid.ui.custom.MenuFilterLayout
+        android:id="@+id/fr_market_place_menu_filter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
