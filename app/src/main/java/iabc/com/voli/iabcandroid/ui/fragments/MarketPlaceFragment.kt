@@ -13,6 +13,7 @@ import iabc.com.voli.iabcandroid.ui.adapters.MarketPlaceAdapter
 import iabc.com.voli.iabcandroid.ui.custom.MenuFilterLayout
 import iabc.com.voli.iabcandroid.view.MarketPlaceFrView
 import kotlinx.android.synthetic.main.fragment_market_place.*
+import java.util.*
 
 /**
  * Created by tengo on 12/17/16.
@@ -20,6 +21,7 @@ import kotlinx.android.synthetic.main.fragment_market_place.*
 class MarketPlaceFragment: BaseFragment(), MarketPlaceFrView, MenuFilterLayout.MenuFilterCallback{
 
     val presenter: MarketPlacePresenter
+    val activatedItems = (0..4).map { false } as ArrayList<Boolean>
 
     init {
         presenter = MarketPlacePresenter(this)
@@ -31,20 +33,29 @@ class MarketPlaceFragment: BaseFragment(), MarketPlaceFrView, MenuFilterLayout.M
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        presenter.startGettingInfo()
+        initViews()
+        refreshContent()
     }
 
-
-    override fun onContentDowloaded(list: List<MarketPlaceFrModel>) {
+    private fun initViews(){
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val listPadding = inflater.inflate(R.layout.fragment_market_place_list_footer, null)
         fr_market_place_list.addFooterView(listPadding)
         fr_market_place_list.addHeaderView(listPadding)
-        fr_market_place_list.adapter = getAdapter(list)
-        fr_market_place_list.setOnItemClickListener { adapterView, view, i, l -> showFilter() }
-
         fr_market_place_menu_filter.callback = this
     }
+
+    private fun refreshContent(){
+        presenter.startGettingInfo(activatedItems)
+    }
+
+
+
+    override fun onContentDowloaded(list: List<MarketPlaceFrModel>) {
+        fr_market_place_list.adapter = getAdapter(list)
+        fr_market_place_list.setOnItemClickListener { adapterView, view, i, l -> showFilter() }
+    }
+
 
     fun showFilter(){
         fr_market_place_menu_filter.show()
@@ -59,10 +70,13 @@ class MarketPlaceFragment: BaseFragment(), MarketPlaceFrView, MenuFilterLayout.M
     }
 
     override fun stateChanged(isOpen: Boolean) {
-        throw UnsupportedOperationException("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun onItemClicked(itemId: Int, activated: Boolean) {
-        throw UnsupportedOperationException("not implemented") //To change body of created functions use File | Settings | File Templates.
+        if(activatedItems[itemId] != activated){
+            activatedItems.set(itemId, activated)
+            refreshContent();
+        }
     }
 }

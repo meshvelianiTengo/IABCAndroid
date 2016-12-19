@@ -14,8 +14,8 @@ class MarketPlacePresenter(private val view: MarketPlaceFrView) : BasePresenter(
         interactor = MarketPlaceInteractor()
     }
 
-    fun startGettingInfo(){
-        interactor.startGettingInfo(this)
+    fun startGettingInfo(list: List<Boolean>){
+        interactor.startGettingInfo(list, this)
     }
 
     override fun onContentDowloaded(list: List<MarketPlaceFrModel>) {
