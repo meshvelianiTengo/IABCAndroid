@@ -9,8 +9,7 @@
     <ImageView
         android:id="@+id/fr_event_inner_image"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="220dp"
+        android:layout_height="250dp"
         android:background="@color/_black65"
         />
 
@@ -67,6 +66,7 @@
                 />
 
             <iabc.com.voli.iabcandroid.ui.custom.CTextView
+                android:id="@+id/fr_event_inner_start_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/_AB2572"
@@ -126,6 +126,7 @@
                     />
 
                 <iabc.com.voli.iabcandroid.ui.custom.CTextView
+                    android:id="@+id/fr_event_inner_end_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/_AB2572"
