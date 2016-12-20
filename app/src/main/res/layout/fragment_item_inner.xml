@@ -109,6 +109,7 @@
                     />
 
                 <LinearLayout
+                    android:id="@+id/fr_item_inner_watch_trailer"
                     android:layout_alignLeft="@id/fr_item_inner_film_image"
                     android:layout_below="@id/fr_item_inner_film_image"
                     android:layout_width="wrap_content"
@@ -142,6 +143,7 @@
                     android:layout_alignTop="@id/fr_item_inner_film_image"
                     android:paddingLeft="25dp"
                     android:orientation="vertical"
+                    android:paddingBottom="10dp"
                     >
                     <iabc.com.voli.iabcandroid.ui.custom.CTextView
                         android:id="@+id/fr_item_inner_title"
@@ -149,7 +151,7 @@
                         android:text="@string/app_def_text_short"
                         app:plusTextSize="@integer/plus_text_size_for_20"
                         />
-                    
+
                     <iabc.com.voli.iabcandroid.ui.custom.CTextView
                         android:id="@+id/fr_item_inner_genre"
                         style="@style/fragmentInnerItemMovieDescTextStyle"
@@ -168,29 +170,36 @@
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_marginTop="25dp"
-                        
+                    <include layout="@layout/fr_item_inner_name_value_pair"
+                        android:id="@+id/fr_item_inner_nvpair_release_date"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        />
 
-                        <iabc.com.voli.iabcandroid.ui.custom.CTextView
-                            android:id="@+id/fr_item_inner_release_date"
-                            style="@style/fragmentInnerItemMovieDescTextStyle"
-                            android:text="@string/fr_item_inner_release_date"
+                    <include layout="@layout/fr_item_inner_name_value_pair"
+                        android:id="@+id/fr_item_inner_nvpair_release_director"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        />
 
-                            />
+                    <include layout="@layout/fr_item_inner_name_value_pair"
+                        android:id="@+id/fr_item_inner_nvpair_release_writer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        />
 
-                    </LinearLayout>
+                    <include layout="@layout/fr_item_inner_name_value_pair"
+                        android:id="@+id/fr_item_inner_nvpair_release_actors"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        />
 
 
-                    
                 </LinearLayout>
-
-                <iabc.com.voli.iabcandroid.ui.custom.CTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-
 
             </RelativeLayout>
 
@@ -204,6 +213,7 @@
                 >
 
                 <iabc.com.voli.iabcandroid.ui.custom.CTextView
+                    android:id="@+id/fr_item_inner_desc_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/_2E383D"
@@ -213,6 +223,7 @@
                     />
 
                 <iabc.com.voli.iabcandroid.ui.custom.CTextView
+                    android:id="@+id/fr_item_inner_desc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"

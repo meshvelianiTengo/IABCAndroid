@@ -20,6 +20,10 @@
     <string name="fr_item_inner_author">Author</string>
     <string name="fr_item_inner_follow">Follow</string>
     <string name="fr_item_inner_watch_trailer">Watch Trailers</string>
+
     <string name="fr_item_inner_release_date">Release year:</string>
+    <string name="fr_item_inner_release_director">Director:</string>
+    <string name="fr_item_inner_release_writer">Writer:</string>
+    <string name="fr_item_inner_release_actors">Actors:</string>
 
 </resources>
