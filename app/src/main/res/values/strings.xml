@@ -25,5 +25,7 @@
     <string name="fr_item_inner_release_director">Director:</string>
     <string name="fr_item_inner_release_writer">Writer:</string>
     <string name="fr_item_inner_release_actors">Actors:</string>
+    <string name="fr_event_inner_start">Start</string>
+    <string name="fr_event_inner_end">End</string>
 
 </resources>
