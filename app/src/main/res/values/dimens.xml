@@ -12,4 +12,6 @@
     <dimen name="custom_choose_item_layout_corner_radius">20dp</dimen>
     <dimen name="activity_half_horizontal_margin">15dp</dimen>
     <dimen name="activity_half_vertical_margin">15dp</dimen>
+
+    <dimen name="list_of_event_fr_list_element_height">100dp</dimen>
 </resources>

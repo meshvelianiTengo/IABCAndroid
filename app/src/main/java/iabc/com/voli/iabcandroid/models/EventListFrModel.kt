@@ -15,6 +15,12 @@ class EventListFrModel() : BaseModel() {
     }
 
     class EventDescription(){
+        constructor(evName: String, evCategory: String, evLocation: String) : this(){
+            this.evName = evName
+            this.evCategory = evCategory
+            this.evLocation = evLocation
+        }
+
         var evName = ""
         var evCategory = ""
         var evLocation = ""

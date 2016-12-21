@@ -14,7 +14,7 @@ import iabc.com.voli.iabcandroid.ui.custom.CustomChooseItemLayout
  */
 class EventListFragmentRecyclerListAdapter(private val eventList: List<EventListFrModel>, private var activatedPosition: Int) : RecyclerView.Adapter<EventListFragmentRecyclerListAdapter.ViewHolder>(){
 
-    var activatedViewHolder : ViewHolder? = null
+    private var activatedViewHolder : ViewHolder? = null
     var itemChosenListener: OnListItemChosen? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -45,7 +45,7 @@ class EventListFragmentRecyclerListAdapter(private val eventList: List<EventList
     }
 
 
-    fun activate(newHolder: ViewHolder) {
+    private fun activate(newHolder: ViewHolder) {
         activatedViewHolder?.text?.setActivation(false)
         newHolder.text.setActivation(true)
         activatedViewHolder = newHolder
