@@ -44,6 +44,11 @@ class EventListFragmentRecyclerListAdapter(private val eventList: List<EventList
         return eventList.size
     }
 
+    fun activateItemWithPosition(position: Int){
+        activatedViewHolder?.text?.setActivation(false)
+        activatedPosition = position
+        notifyDataSetChanged()
+    }
 
     private fun activate(newHolder: ViewHolder) {
         activatedViewHolder?.text?.setActivation(false)
@@ -51,7 +56,7 @@ class EventListFragmentRecyclerListAdapter(private val eventList: List<EventList
         activatedViewHolder = newHolder
         activatedPosition = newHolder.currentPosition
         if (newHolder.currentPosition > -1 && newHolder.currentPosition < eventList.size)
-            itemChosenListener?.onItemChosen(eventList[newHolder.currentPosition], newHolder.currentPosition)
+            itemChosenListener?.eventListFrRListAdapter_onItemChosen(eventList[newHolder.currentPosition], newHolder.currentPosition)
     }
 
 
@@ -66,7 +71,7 @@ class EventListFragmentRecyclerListAdapter(private val eventList: List<EventList
 
 
     interface OnListItemChosen{
-        fun onItemChosen(item: EventListFrModel, position: Int)
+        fun eventListFrRListAdapter_onItemChosen(item: EventListFrModel, position: Int)
     }
 
 }

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import iabc.com.voli.iabcandroid.R
-import iabc.com.voli.iabcandroid.models.EventListFrModel
+import iabc.com.voli.iabcandroid.models.EventDescription
 import java.util.*
 
 /**
@@ -17,16 +17,24 @@ class ListOfEventFragment : BaseFragment(){
 
     companion object{
         const val ITEM_LIST_BUNDLE = "item_list_bundle_name"
+
+        fun newInstanse(args: ArrayList<EventDescription>) : ListOfEventFragment{
+            val fr = ListOfEventFragment()
+            val bundle = Bundle()
+            bundle.putSerializable(ITEM_LIST_BUNDLE, args);
+            fr.arguments = bundle
+            return fr;
+        }
     }
 
     lateinit var listLayout : LinearLayout
 
-    lateinit var itemList : ArrayList<EventListFrModel.EventDescription>
+    lateinit var itemList : ArrayList<EventDescription>
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater?.inflate(R.layout.list_of_event_fragment, container, false)
-//        itemList = arguments.getSerializable(ITEM_LIST_BUNDLE) as ArrayList<EventListFrModel.EventDescription>
-        itemList = (1..7).map { EventListFrModel.EventDescription("name: " + it, "ev category " +it, "ev location " + it) } as ArrayList<EventListFrModel.EventDescription>
+        itemList = arguments.getSerializable(ITEM_LIST_BUNDLE) as ArrayList<EventDescription>
+//        itemList = (1..7).map { EventListFrModel.EventDescription("name: " + it, "ev category " +it, "ev location " + it) } as ArrayList<EventListFrModel.EventDescription>
         listLayout = view?.findViewById(R.id.fr_list_of_event_layout) as LinearLayout
         if(inflater != null) {
             initLayout(inflater)

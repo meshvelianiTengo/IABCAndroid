@@ -7,24 +7,13 @@ import java.util.*
  */
 class EventListFrModel() : BaseModel() {
     var date = ""
-    var eventList : List<EventDescription> = ArrayList<EventDescription>()
+    var eventList = ArrayList<EventDescription>()
 
-    constructor(date: String, eventList: List<EventDescription>) : this() {
+    constructor(date: String, eventList: ArrayList<EventDescription>) : this() {
         this.date = date
         this.eventList = eventList
     }
 
-    class EventDescription(){
-        constructor(evName: String, evCategory: String, evLocation: String) : this(){
-            this.evName = evName
-            this.evCategory = evCategory
-            this.evLocation = evLocation
-        }
-
-        var evName = ""
-        var evCategory = ""
-        var evLocation = ""
-    }
 
 
 
