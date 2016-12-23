@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingLeft="25dp"
+    android:layout_marginRight="20dp"
+    android:gravity="center_vertical"
+    android:background="@color/_FAFAFA"
+
+    >
+
+    <ImageView
+        android:id="@+id/fr_company_list_item_image"
+        android:layout_width="@dimen/fr_company_list_item_width"
+        android:layout_height="@dimen/fr_company_list_item_height"
+        />
+    
+    <iabc.com.voli.iabcandroid.ui.custom.CTextView
+        android:id="@+id/fr_company_list_item_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:lines="1"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        app:plusTextSize="@integer/plus_text_size_for_15"
+        />
+
+
+</LinearLayout>
