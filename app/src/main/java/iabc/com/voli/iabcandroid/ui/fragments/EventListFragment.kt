@@ -3,6 +3,7 @@ package iabc.com.voli.iabcandroid.ui.fragments
 import android.os.Bundle
 import android.support.v4.view.ViewPager
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -66,6 +67,9 @@ class EventListFragment : BaseFragment(), EventListFrView, EventListFragmentRecy
     override fun onPageSelected(position: Int) {
         if(pagerScrolledAtLeastOnce) {
             recyclerAdapter?.activateItemWithPosition(position)
+//            val scrollX : Int = fr_event_list_recycler.getChildAt(0).width * (position - 1)
+
+            fr_event_list_recycler.layoutManager.smoothScrollToPosition(fr_event_list_recycler, RecyclerView.State() ,position)
         }
     }
 
