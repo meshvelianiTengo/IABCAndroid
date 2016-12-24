@@ -9,6 +9,5 @@
 
     <style name="SplashScreenTheme" parent="@android:style/Theme.NoTitleBar.Fullscreen">
         <item name="android:windowBackground">@drawable/splash_screen_drawable_background</item>
-
     </style>
 </resources>

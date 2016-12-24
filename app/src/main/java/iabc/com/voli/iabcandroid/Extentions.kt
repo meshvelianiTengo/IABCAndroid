@@ -4,7 +4,9 @@ import android.app.Activity
 import android.graphics.Bitmap
 import android.support.v4.app.Fragment
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory
+import android.view.View.GONE
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.target.BitmapImageViewTarget
@@ -63,5 +65,13 @@ fun ImageView.setRoundImageFromUrl(url: String, placeHolder: Int? = null){
         if(placeHolder != nextFocusUpId) {
             setImageResource(placeHolder as Int)
         }
+    }
+}
+
+fun TextView.setTextOrGone(value: String?){
+    if(value != null){
+        text = value
+    }else{
+        visibility = GONE
     }
 }

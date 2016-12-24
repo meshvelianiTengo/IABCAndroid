@@ -8,4 +8,8 @@ import iabc.com.voli.iabcandroid.models.CompanyInnerActModel
 interface CompanyInnerActView : BaseView {
     fun onModelLoaded(model: CompanyInnerActModel)
     fun onFailed(msg: String)
+
+    fun onWatchingStarted(model: CompanyInnerActModel)
+    fun onWatchingStopped(model: CompanyInnerActModel)
+    fun onStartWatchFailed()
 }

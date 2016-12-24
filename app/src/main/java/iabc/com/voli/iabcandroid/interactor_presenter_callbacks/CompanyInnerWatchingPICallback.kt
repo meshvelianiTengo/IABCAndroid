@@ -5,8 +5,7 @@ import iabc.com.voli.iabcandroid.models.CompanyInnerActModel
 /**
  * Created by tengo on 12/24/16.
  */
-interface CompanyInnerActPICallback : BasePICallback{
-    fun onModelLoaded(model: CompanyInnerActModel)
-    fun onFailed(msg: String)
-
+interface CompanyInnerWatchingPICallback {
+    fun onWatchingSuccess(model: CompanyInnerActModel)
+    fun onWathingFailed(model: CompanyInnerActModel)
 }
