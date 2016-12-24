@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import iabc.com.voli.iabcandroid.R
 import iabc.com.voli.iabcandroid.makeToast
-import iabc.com.voli.iabcandroid.models.MarketPlaceFrModel
+import iabc.com.voli.iabcandroid.models.MovieItemModel
 import iabc.com.voli.iabcandroid.presenter.MarketPlacePresenter
 import iabc.com.voli.iabcandroid.ui.adapters.MarketPlaceAdapter
 import iabc.com.voli.iabcandroid.ui.custom.MenuFilterLayout
@@ -51,7 +51,7 @@ class MarketPlaceFragment: BaseFragment(), MarketPlaceFrView, MenuFilterLayout.M
 
 
 
-    override fun onContentDowloaded(list: List<MarketPlaceFrModel>) {
+    override fun onContentDowloaded(list: List<MovieItemModel>) {
         fr_market_place_list.adapter = getAdapter(list)
         fr_market_place_list.setOnItemClickListener { adapterView, view, i, l -> showFilter() }
     }
@@ -61,7 +61,7 @@ class MarketPlaceFragment: BaseFragment(), MarketPlaceFrView, MenuFilterLayout.M
         fr_market_place_menu_filter.show()
     }
 
-    fun getAdapter(list: List<MarketPlaceFrModel>) : MarketPlaceAdapter{
+    fun getAdapter(list: List<MovieItemModel>) : MarketPlaceAdapter{
         return MarketPlaceAdapter(context, list)
     }
 

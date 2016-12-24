@@ -5,23 +5,10 @@ package iabc.com.voli.iabcandroid.models
  */
 class AboutUsFrModel() : BaseModel(){
     lateinit var textList: List<String>
-    lateinit var contactInfo: ContactInfo
+    lateinit var contactInfo: ContactInfoModel
 
-    constructor(textList: List<String>, contactInfo: ContactInfo) : this() {
+    constructor(textList: List<String>, contactInfo: ContactInfoModel) : this() {
         this.textList = textList
         this.contactInfo = contactInfo
-    }
-
-
-    class ContactInfo{
-        val location: String
-        val email: String
-        val mobile: String
-
-        constructor(location: String, email: String, mobile: String) {
-            this.location = location
-            this.email = email
-            this.mobile = mobile
-        }
     }
 }

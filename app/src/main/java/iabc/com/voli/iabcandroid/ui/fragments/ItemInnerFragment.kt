@@ -9,8 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
-import com.bumptech.glide.Glide
 import iabc.com.voli.iabcandroid.R
+import iabc.com.voli.iabcandroid.loadImageFromUrl
 import iabc.com.voli.iabcandroid.models.ItemInnerFrModel
 import iabc.com.voli.iabcandroid.presenter.ItemInnerFrPresenter
 import iabc.com.voli.iabcandroid.view.ItemInnerFrView
@@ -36,7 +36,7 @@ class ItemInnerFragment : BaseFragment(), ItemInnerFrView{
 
 
     override fun onModelLoaded(model: ItemInnerFrModel) {
-        Glide.with(context).load(model.imageLink).placeholder(R.mipmap.into_image).into(fr_item_inner_film_image)
+        fr_item_inner_film_image.loadImageFromUrl(model.imageLink, R.mipmap.into_image)
         fr_item_inner_watch_trailer.setOnClickListener { loadTrailer(model.trailerLink) }
 
         fr_item_inner_title.text = model.name

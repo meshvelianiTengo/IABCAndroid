@@ -16,4 +16,6 @@
     <dimen name="list_of_event_fr_list_element_height">100dp</dimen>
     <dimen name="fr_company_list_item_height">40dp</dimen>
     <dimen name="fr_company_list_item_width">40dp</dimen>
+    <dimen name="contact_info_padding_left">20dp</dimen>
+    <dimen name="act_company_inner_list_height">200dp</dimen>
 </resources>

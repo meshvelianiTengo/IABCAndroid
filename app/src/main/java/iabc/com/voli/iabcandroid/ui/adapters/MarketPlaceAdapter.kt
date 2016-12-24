@@ -5,15 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import com.bumptech.glide.Glide
 import iabc.com.voli.iabcandroid.R
-import iabc.com.voli.iabcandroid.models.MarketPlaceFrModel
+import iabc.com.voli.iabcandroid.loadImageFromUrlWithFitCenter
+import iabc.com.voli.iabcandroid.models.MovieItemModel
 import iabc.com.voli.iabcandroid.ui.custom.MovieListItem
 
 /**
  * Created by tengo on 12/17/16.
  */
-class MarketPlaceAdapter(private val context: Context, private val list: List<MarketPlaceFrModel>) : BaseAdapter(){
+class MarketPlaceAdapter(private val context: Context, private val list: List<MovieItemModel>) : BaseAdapter(){
     val inflater: LayoutInflater
 
     init {
@@ -68,17 +68,17 @@ class MarketPlaceAdapter(private val context: Context, private val list: List<Ma
             view3 = parent.findViewById(R.id.fr_market_place_list_item_3) as MovieListItem
         }
 
-        fun fillViews(item1: MarketPlaceFrModel, item2: MarketPlaceFrModel?, item3: MarketPlaceFrModel?){
+        fun fillViews(item1: MovieItemModel, item2: MovieItemModel?, item3: MovieItemModel?){
             fillView(item1, view1)
             fillView(item2, view2)
             fillView(item3, view3)
 
         }
 
-        private fun fillView(item: MarketPlaceFrModel?, view: MovieListItem){
+        private fun fillView(item: MovieItemModel?, view: MovieListItem){
             if(item != null){
                 view.visibility = View.VISIBLE
-                Glide.with(context).load(item.imageUrl).placeholder(R.drawable.home_fragment_gradient_background_color).fitCenter().into(view.image)
+                view.image.loadImageFromUrlWithFitCenter(item.imageUrl, R.drawable.home_fragment_gradient_background_color)
                 view.setName(item.name)
                 view.setType(item.type)
             }else{

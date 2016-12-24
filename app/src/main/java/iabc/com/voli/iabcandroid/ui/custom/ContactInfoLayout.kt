@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import iabc.com.voli.iabcandroid.R
-import iabc.com.voli.iabcandroid.models.AboutUsFrModel
+import iabc.com.voli.iabcandroid.models.ContactInfoModel
 import kotlinx.android.synthetic.main.contact_info_layout.view.*
 
 /**
@@ -50,7 +50,7 @@ class ContactInfoLayout : LinearLayout{
         setTextOrHide(mobile, R.string.mobile, mobileV)
     }
 
-    fun setContactInfo(info: AboutUsFrModel.ContactInfo){
+    fun setContactInfo(info: ContactInfoModel){
         setContactInfo(info.location, info.email, info.mobile)
     }
 

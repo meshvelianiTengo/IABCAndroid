@@ -10,8 +10,8 @@
     <string name="mobile">Mobile</string>
     <string name="fr_about_us_more">More IABC Events</string>
     <string name="user_profile">User profile</string>
-    
-    
+
+
     <string name="filter_design">Design</string>
     <string name="filter_cartoon">Cartoon</string>
     <string name="filter_comix">Comics</string>
@@ -27,5 +27,6 @@
     <string name="fr_item_inner_release_actors">Actors:</string>
     <string name="fr_event_inner_start">Start</string>
     <string name="fr_event_inner_end">End</string>
+    <string name="act_company_inner_movies">Movies</string>
 
 </resources>

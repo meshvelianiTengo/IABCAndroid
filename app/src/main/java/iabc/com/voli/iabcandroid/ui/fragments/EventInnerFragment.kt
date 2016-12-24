@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bumptech.glide.Glide
 import iabc.com.voli.iabcandroid.R
+import iabc.com.voli.iabcandroid.loadImageFromUrl
 import iabc.com.voli.iabcandroid.models.EventInnerFrModel
 import iabc.com.voli.iabcandroid.presenter.EventInnerPresenter
 import iabc.com.voli.iabcandroid.view.EventInnerFrView
@@ -32,9 +32,7 @@ class EventInnerFragment : BaseFragment(), EventInnerFrView{
         fr_event_inner_location.text = model.location
         fr_event_inner_end_time.text = model.endTime
         fr_event_inner_start_time.text = model.startTime
-
-        Glide.with(context).load(model.imageUrl).placeholder(R.mipmap.into_image).into(fr_event_inner_image)
-
+        fr_event_inner_image.loadImageFromUrl(model.imageUrl, R.mipmap.into_image)
     }
 
     override fun onError(msg: String) {

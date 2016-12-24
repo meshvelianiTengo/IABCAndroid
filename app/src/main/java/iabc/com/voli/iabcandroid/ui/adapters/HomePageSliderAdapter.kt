@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import com.bumptech.glide.Glide
 import iabc.com.voli.iabcandroid.R
+import iabc.com.voli.iabcandroid.loadImageFromUrl
 import iabc.com.voli.iabcandroid.models.HomeFragmentSliderModel
 
 /**
@@ -27,7 +27,7 @@ class HomePageSliderAdapter(private val context: Context, private val models: Li
         val image = layout.findViewById(R.id.adapter_home_fr_slider_image) as ImageView
         val text = layout.findViewById(R.id.adapter_home_fr_slider_text) as TextView
 
-        Glide.with(context).load(item.image).into(image)
+        image.loadImageFromUrl(item.image)
         text.text = item.text
         container.addView(layout)
         return layout

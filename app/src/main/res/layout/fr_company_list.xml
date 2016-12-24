@@ -12,9 +12,6 @@
         android:divider="@color/_E6E6E6"
         android:dividerHeight="1dp"
         android:background="@color/_FAFAFA"
-        >
-
-
-    </ListView>
+        />
 
 </LinearLayout>

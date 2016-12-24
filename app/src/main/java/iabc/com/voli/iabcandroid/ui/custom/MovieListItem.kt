@@ -7,6 +7,8 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import iabc.com.voli.iabcandroid.R
+import iabc.com.voli.iabcandroid.loadImageFromUrl
+import iabc.com.voli.iabcandroid.models.MovieItemModel
 
 /**
  * Created by tengo on 12/17/16.
@@ -47,4 +49,11 @@ class MovieListItem : RelativeLayout {
         typeTV.text = type;
     }
 
+    fun initFromModel(model: MovieItemModel?){
+        if(model != null) {
+            setName(model.name)
+            setType(model.type)
+            image.loadImageFromUrl(model.imageUrl)
+        }
+    }
 }

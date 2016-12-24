@@ -1,19 +1,15 @@
 package iabc.com.voli.iabcandroid.ui.adapters
 
 import android.content.Context
-import android.graphics.Bitmap
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.target.BitmapImageViewTarget
 import iabc.com.voli.iabcandroid.R
 import iabc.com.voli.iabcandroid.models.CompanyListFrModel
-
+import iabc.com.voli.iabcandroid.setRoundImageFromUrl
 
 
 /**
@@ -66,13 +62,7 @@ class CompanyListFrAdapter(private val context: Context, private val list: List<
 
         fun fillViews(item: CompanyListFrModel){
             textV.text = item.name
-            Glide.with(context).load(item.imageUrl).asBitmap().centerCrop().into(object : BitmapImageViewTarget(imageV) {
-                override fun setResource(resource: Bitmap) {
-                    val circularBitmapDrawable = RoundedBitmapDrawableFactory.create(context.resources, resource)
-                    circularBitmapDrawable.isCircular = true
-                    imageV.setImageDrawable(circularBitmapDrawable)
-                }
-            })
+            imageV.setRoundImageFromUrl(item.imageUrl)
         }
     }
 }

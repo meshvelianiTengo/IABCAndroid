@@ -2,7 +2,7 @@ package iabc.com.voli.iabcandroid.presenter
 
 import iabc.com.voli.iabcandroid.interactor_presenter_callbacks.MarketPlacePresenterInteractorCallback
 import iabc.com.voli.iabcandroid.interactors.MarketPlaceInteractor
-import iabc.com.voli.iabcandroid.models.MarketPlaceFrModel
+import iabc.com.voli.iabcandroid.models.MovieItemModel
 import iabc.com.voli.iabcandroid.view.MarketPlaceFrView
 
 /**
@@ -18,7 +18,7 @@ class MarketPlacePresenter(private val view: MarketPlaceFrView) : BasePresenter(
         interactor.startGettingInfo(list, this)
     }
 
-    override fun onContentDowloaded(list: List<MarketPlaceFrModel>) {
+    override fun onContentDowloaded(list: List<MovieItemModel>) {
         view.onContentDowloaded(list)
     }
 

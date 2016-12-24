@@ -44,7 +44,6 @@ class IntroActivity : AppCompatActivity() , IntroActivityView{
         CTextView.fullTextSize = 14 + spPlusForResolution
     }
 
-
     override fun onFirstLaunch(list: List<IntroActivityModel> ) {
         setTheme(R.style.AppTheme_NoActionBar)
         setContentView(R.layout.activity_intro)
@@ -58,14 +57,11 @@ class IntroActivity : AppCompatActivity() , IntroActivityView{
 
         act_intro_logo.startAnimation(transAnim)
 
-
     }
-
 
     override fun onPushMain() {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, CompanyInnerActivity::class.java)
         startActivity(intent)
     }
-
 
 }

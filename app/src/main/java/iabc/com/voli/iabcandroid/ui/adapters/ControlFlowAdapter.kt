@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
-import com.bumptech.glide.Glide
 import iabc.com.voli.iabcandroid.R
+import iabc.com.voli.iabcandroid.loadImageFromUrl
 import iabc.com.voli.iabcandroid.models.HomeFragmentMovieModel
 
 /**
@@ -62,7 +62,7 @@ class ControlFlowAdapter(private val context: Context, private val models: List<
         }
 
         fun fillViews(item: HomeFragmentMovieModel){
-            Glide.with(context).load(item.image).placeholder(R.mipmap.into_image).into(imageView)
+            imageView.loadImageFromUrl(item.image, R.mipmap.into_image)
             textView.text = item.title
         }
     }

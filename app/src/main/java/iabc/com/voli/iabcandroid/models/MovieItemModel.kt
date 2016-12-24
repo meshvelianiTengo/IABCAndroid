@@ -3,7 +3,7 @@ package iabc.com.voli.iabcandroid.models
 /**
  * Created by tengo on 12/17/16.
  */
-class MarketPlaceFrModel() : BaseModel(){
+class MovieItemModel() : BaseModel(){
     var imageUrl = ""
     var type = ""
     var name = ""
