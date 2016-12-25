@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:gravity="center_horizontal">
 
     <ImageView
@@ -34,6 +34,7 @@
         android:text="@string/app_def_text_short"
         app:plusTextSize="@integer/plus_text_size_for_12"
         app:font_name="AVERNIR_NEXT"
+        android:layout_marginBottom="15dp"
         />
 
     <LinearLayout
@@ -139,4 +140,22 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <iabc.com.voli.iabcandroid.ui.custom.CTextView
+        android:id="@+id/fr_event_inner_bottom_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/_242424"
+        android:text="@string/app_def_text_short"
+        android:gravity="center"
+        app:plusTextSize="@integer/plus_text_size_for_14"
+        app:font_name="AVERNIR_NEXT"
+        />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
 </LinearLayout>

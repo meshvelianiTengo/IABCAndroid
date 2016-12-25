@@ -15,7 +15,7 @@ import java.util.*
  */
 class UserCenterFragment : BaseFragment(){
 
-    var pagerAdapter = UserCenterAdapter(fragmentManager, (1..3).map { EventDescription("name", "cat", "loc") } as ArrayList<EventDescription>)
+    lateinit var pagerAdapter : UserCenterAdapter
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater?.inflate(R.layout.fr_user_center, container, false)
@@ -23,6 +23,7 @@ class UserCenterFragment : BaseFragment(){
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        pagerAdapter = UserCenterAdapter(fragmentManager, (1..3).map { EventDescription("name", "cat", "loc") } as ArrayList<EventDescription>)
         fr_user_center_pager.adapter = pagerAdapter
         initPager()
     }

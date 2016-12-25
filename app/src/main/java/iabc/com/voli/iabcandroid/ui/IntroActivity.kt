@@ -60,7 +60,7 @@ class IntroActivity : AppCompatActivity() , IntroActivityView{
     }
 
     override fun onPushMain() {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, EventInnerActivity::class.java)
         startActivity(intent)
     }
 

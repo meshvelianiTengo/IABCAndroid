@@ -1,14 +1,15 @@
 package iabc.com.voli.iabcandroid.presenter
 
 import iabc.com.voli.iabcandroid.interactor_presenter_callbacks.EventInnerPICallback
+import iabc.com.voli.iabcandroid.interactor_presenter_callbacks.EventJoinPICallback
 import iabc.com.voli.iabcandroid.interactors.EventInnerInteractor
-import iabc.com.voli.iabcandroid.models.EventInnerFrModel
-import iabc.com.voli.iabcandroid.view.EventInnerFrView
+import iabc.com.voli.iabcandroid.models.EventInnerModel
+import iabc.com.voli.iabcandroid.view.EventInnerView
 
 /**
  * Created by tengo on 12/20/16.
  */
-class EventInnerPresenter(private val view: EventInnerFrView) : BasePresenter(), EventInnerPICallback {
+class EventInnerPresenter(private val view: EventInnerView) : BasePresenter(), EventInnerPICallback, EventJoinPICallback {
 
     val interactor = EventInnerInteractor()
 
@@ -16,11 +17,28 @@ class EventInnerPresenter(private val view: EventInnerFrView) : BasePresenter(),
         interactor.startGettingEvent(eventId, this)
     }
 
-    override fun onSuccess(model: EventInnerFrModel) {
+    fun changeJoinStatus(model: EventInnerModel?) {
+        if(model != null){
+            interactor.changeJoinStatus(model, this);
+        }
+    }
+
+
+    override fun onSuccess(model: EventInnerModel) {
         view.onSuccess(model)
     }
 
     override fun onError(msg: String) {
         view.onError(msg)
+    }
+
+
+    override fun onJoinedFinished(model: EventInnerModel) {
+        if(model.isJoined) view.onEventJoined(model)
+        else view.onEventUnjoined(model)
+    }
+
+    override fun onJoinFailed(msg: String) {
+        view.onJoinFailed(msg)
     }
 }

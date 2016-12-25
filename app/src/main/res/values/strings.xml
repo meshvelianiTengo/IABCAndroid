@@ -28,5 +28,7 @@
     <string name="fr_event_inner_start">Start</string>
     <string name="fr_event_inner_end">End</string>
     <string name="act_company_inner_movies">Movies</string>
+    <string name="act_event_inner_menu_join">Join</string>
+    <string name="act_event_inner_menu_joined">Joined</string>
 
 </resources>
