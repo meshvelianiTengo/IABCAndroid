@@ -40,6 +40,8 @@ class CTextView : TextView{
                 xTextSize = texts.getFloat(R.styleable.CtextViewStyle_xTextSize, 1f)
             } catch (e: Exception) {
                 e.printStackTrace()
+            }finally {
+                texts.recycle()
             }
 
             initTextSize()

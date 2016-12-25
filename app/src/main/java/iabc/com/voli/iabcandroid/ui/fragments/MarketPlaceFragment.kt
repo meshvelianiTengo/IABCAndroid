@@ -18,7 +18,27 @@ import java.util.*
 /**
  * Created by tengo on 12/17/16.
  */
-class MarketPlaceFragment: BaseFragment(), MarketPlaceFrView, MenuFilterLayout.MenuFilterCallback{
+class MarketPlaceFragment private constructor(): BaseFragment(), MarketPlaceFrView, MenuFilterLayout.MenuFilterCallback{
+
+    companion object{
+        const val BUNDLE_FAVOURITE = "item_for_favourite"
+
+        fun newInstanseFavourites(): MarketPlaceFragment{
+            return getCompanyListFr(true)
+        }
+
+        fun newInstanse(): MarketPlaceFragment{
+            return getCompanyListFr(false)
+        }
+
+        private fun getCompanyListFr(isFavourite: Boolean): MarketPlaceFragment{
+            val fr = MarketPlaceFragment()
+            val bundle = Bundle()
+            bundle.putBoolean(BUNDLE_FAVOURITE, isFavourite)
+            fr.arguments = bundle
+            return fr
+        }
+    }
 
     val presenter: MarketPlacePresenter
     val activatedItems = (0..4).map { false } as ArrayList<Boolean>
@@ -46,7 +66,11 @@ class MarketPlaceFragment: BaseFragment(), MarketPlaceFrView, MenuFilterLayout.M
     }
 
     private fun refreshContent(){
-        presenter.startGettingInfo(activatedItems)
+        if(arguments.getBoolean(BUNDLE_FAVOURITE)) {
+            presenter.startGettingFavourites()
+        }else{
+            presenter.startGettingInfo(activatedItems)
+        }
     }
 
 

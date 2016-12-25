@@ -17,19 +17,36 @@ class UserCenterTabLayoutItem : LinearLayout{
     lateinit var textV : TextView
 
     constructor(context: Context?) : super(context){
-        inflateLayout();
+        inflateLayout(null);
     }
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs){
-        inflateLayout();
+        inflateLayout(attrs);
     }
     constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr){
-        inflateLayout();
+        inflateLayout(attrs);
     }
 
-    private fun inflateLayout() {
+    private fun inflateLayout(attrs: AttributeSet?) {
         val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         inflater.inflate(R.layout.user_center_text_with_icon_layout, this, true)
         initViews()
+        parseAttrs(attrs)
+    }
+
+    private fun parseAttrs(attrs: AttributeSet?) {
+        if(attrs != null) {
+            val info = context.theme.obtainStyledAttributes(attrs, R.styleable.UserCenterTabLayoutItem, 0, 0)
+            try{
+                val src = info.getDrawable(R.styleable.UserCenterTabLayoutItem_u_c_t_icon_src)
+                val text = info.getString(R.styleable.UserCenterTabLayoutItem_u_c_t_text)
+                textV.text = text
+                imageV.setImageDrawable(src)
+            }catch (e: Exception){
+                e.printStackTrace()
+            }finally {
+                info.recycle()
+            }
+        }
     }
 
     private fun initViews() {

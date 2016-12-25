@@ -69,7 +69,7 @@ class EventListFragment : BaseFragment(), EventListFrView, EventListFragmentRecy
             recyclerAdapter?.activateItemWithPosition(position)
 //            val scrollX : Int = fr_event_list_recycler.getChildAt(0).width * (position - 1)
 
-            fr_event_list_recycler.layoutManager.smoothScrollToPosition(fr_event_list_recycler, RecyclerView.State() ,position)
+            fr_event_list_recycler.layoutManager.smoothScrollToPosition(fr_event_list_recycler, RecyclerView.State(), position)
         }
     }
 

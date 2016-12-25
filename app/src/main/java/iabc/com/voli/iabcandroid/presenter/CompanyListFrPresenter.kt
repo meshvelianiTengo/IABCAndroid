@@ -12,8 +12,8 @@ class CompanyListFrPresenter(private val view: CompanyListFrView) : BasePresente
 
     val interactor = CompaniListFrInteractor()
 
-    fun startGettingInfo(){
-        interactor.startGettingInfo(this)
+    fun startGettingInfo(isFavourite: Boolean){
+        interactor.startGettingInfo(this, isFavourite)
     }
 
     override fun onListLoaded(list: List<CompanyListFrModel>) {

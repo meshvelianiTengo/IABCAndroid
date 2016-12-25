@@ -8,12 +8,16 @@ import java.util.*
  * Created by tengo on 12/17/16.
  */
 class MarketPlaceInteractor {
-    fun startGettingInfo(list: List<Boolean>, callback: MarketPlacePresenterInteractorCallback){
+    fun startGettingInfo(list: List<Boolean>, callback: MarketPlacePresenterInteractorCallback) {
         val retList = list.indices
                 .filter { list[it] }
-                .mapTo(ArrayList<MovieItemModel>()) { MovieItemModel(imageUrl= HomeFragmentInteractor.DEF_IMAGE_URL, name = "title = " + it, type = "type = " + it) }
+                .mapTo(ArrayList<MovieItemModel>()) { MovieItemModel(imageUrl = HomeFragmentInteractor.DEF_IMAGE_URL, name = "title = " + it, type = "type = " + it) }
         //        val retList = (1..3).map { MovieItemModel(imageUrl= HomeFragmentInteractor.DEF_IMAGE_URL, name = "title = " + it, type = "type = " + it) }
 
         callback.onContentDowloaded(retList)
+    }
+
+    fun startGettingFavouritesList(callback: MarketPlacePresenterInteractorCallback) {
+        callback.onContentDowloaded((1..15).mapTo(ArrayList<MovieItemModel>()) { MovieItemModel(imageUrl = HomeFragmentInteractor.DEF_IMAGE_URL, name = "title = " + it, type = "type = " + it) })
     }
 }

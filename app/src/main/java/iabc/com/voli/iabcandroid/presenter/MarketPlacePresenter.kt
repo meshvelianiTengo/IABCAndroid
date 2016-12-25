@@ -18,6 +18,10 @@ class MarketPlacePresenter(private val view: MarketPlaceFrView) : BasePresenter(
         interactor.startGettingInfo(list, this)
     }
 
+    fun startGettingFavourites(){
+        interactor.startGettingFavouritesList()
+    }
+
     override fun onContentDowloaded(list: List<MovieItemModel>) {
         view.onContentDowloaded(list)
     }

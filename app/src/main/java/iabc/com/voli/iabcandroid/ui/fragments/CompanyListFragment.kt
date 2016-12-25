@@ -17,7 +17,27 @@ import kotlinx.android.synthetic.main.fr_company_list.*
 /**
  * Created by tengo on 12/23/16.
  */
-class CompanyListFragment : BaseFragment(), CompanyListFrView{
+class CompanyListFragment private constructor() : BaseFragment(), CompanyListFrView{
+
+    companion object{
+        const val BUNDLE_FAVOURITE = "item_for_favourite"
+
+        fun newInstaseFavourites() : CompanyListFragment{
+            return getCompanyListFr(true)
+        }
+
+        fun newInstanse() : CompanyListFragment{
+            return getCompanyListFr(false)
+        }
+
+        private fun getCompanyListFr(isFavourite: Boolean): CompanyListFragment{
+            val fr = CompanyListFragment()
+            val bundle = Bundle()
+            bundle.putBoolean(BUNDLE_FAVOURITE, isFavourite)
+            fr.arguments = bundle
+            return fr
+        }
+    }
 
     val presenter = CompanyListFrPresenter(this)
 
@@ -27,7 +47,7 @@ class CompanyListFragment : BaseFragment(), CompanyListFrView{
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        presenter.startGettingInfo()
+        presenter.startGettingInfo(arguments.getBoolean(BUNDLE_FAVOURITE))
     }
 
     override fun onListLoaded(list: List<CompanyListFrModel>) {

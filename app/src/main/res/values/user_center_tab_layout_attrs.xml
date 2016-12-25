@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="UserCenterTabLayoutItem">
+        <attr name="u_c_t_icon_src" format="integer"/>
+        <attr name="u_c_t_text" format="string"/>
+    </declare-styleable>
+</resources>

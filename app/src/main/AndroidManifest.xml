@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ui.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.IntroActivity"
             android:theme="@style/SplashScreenTheme">
@@ -22,7 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.CompanyInnerActivity"></activity>
+        <activity android:name=".ui.CompanyInnerActivity" />
+        <activity android:name=".ui.EventInnerActivity"></activity>
     </application>
 
 </manifest>
