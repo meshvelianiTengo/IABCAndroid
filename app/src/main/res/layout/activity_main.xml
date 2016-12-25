@@ -25,9 +25,19 @@
         android:background="@color/white"
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
+        >
 
-        />
-    <!--app:menu="@menu/activity_main_drawer"-->
+        <iabc.com.voli.iabcandroid.ui.custom.MenuView
+            android:id="@+id/menu_item_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:m_v_icon_src="@mipmap/home"
+            app:m_v_text="@string/menu_name_home"
+            />
+
+
+
+    </android.support.design.widget.NavigationView>
 
 
 </android.support.v4.widget.DrawerLayout>

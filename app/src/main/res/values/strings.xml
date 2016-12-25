@@ -30,5 +30,6 @@
     <string name="act_company_inner_movies">Movies</string>
     <string name="act_event_inner_menu_join">Join</string>
     <string name="act_event_inner_menu_joined">Joined</string>
+    <string name="menu_name_home">Home</string>
 
 </resources>

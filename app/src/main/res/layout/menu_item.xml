@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/menu_item_height"
+    android:gravity="center_vertical">
+    <ImageView
+        android:id="@+id/menu_item_activation_indicator"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:background="@color/_2E383D"
+        />
+    <ImageView
+        android:id="@+id/menu_item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/menu_item_icon_margin_left"
+        android:src="@mipmap/menu"
+        />
+
+    <iabc.com.voli.iabcandroid.ui.custom.CTextView
+        android:id="@+id/menu_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/menu_item_text_margin_to_icon"
+        app:plusTextSize="@integer/plus_text_size_for_12"
+        android:text="@string/app_def_text_short"
+        />
+
+</LinearLayout>
