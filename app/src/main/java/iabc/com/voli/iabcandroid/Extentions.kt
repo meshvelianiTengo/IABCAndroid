@@ -2,8 +2,10 @@ package iabc.com.voli.iabcandroid
 
 import android.app.Activity
 import android.graphics.Bitmap
+import android.support.annotation.IdRes
 import android.support.v4.app.Fragment
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory
+import android.support.v7.app.AppCompatActivity
 import android.view.View.GONE
 import android.widget.ImageView
 import android.widget.TextView
@@ -52,7 +54,7 @@ fun ImageView.loadImageFromUrlWithFitCenter(url: String?, placeHolder: Int? = nu
 }
 
 
-fun ImageView.setRoundImageFromUrl(url: String, placeHolder: Int? = null){
+fun ImageView.loadRoundImageFromUrl(url: String, placeHolder: Int? = null){
     if(url != null) {
         Glide.with(context).load(url).asBitmap().into(object : BitmapImageViewTarget(this) {
             override fun setResource(resource: Bitmap) {
@@ -74,4 +76,8 @@ fun TextView.setTextOrGone(value: String?){
     }else{
         visibility = GONE
     }
+}
+
+fun AppCompatActivity.changeFragment(@IdRes frView: Int, fragment: Fragment){
+    supportFragmentManager.beginTransaction().replace(frView, fragment, fragment.javaClass.simpleName)
 }

@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import iabc.com.voli.iabcandroid.R
 import iabc.com.voli.iabcandroid.models.CompanyListFrModel
-import iabc.com.voli.iabcandroid.setRoundImageFromUrl
+import iabc.com.voli.iabcandroid.loadRoundImageFromUrl
 
 
 /**
@@ -62,7 +62,7 @@ class CompanyListFrAdapter(private val context: Context, private val list: List<
 
         fun fillViews(item: CompanyListFrModel){
             textV.text = item.name
-            imageV.setRoundImageFromUrl(item.imageUrl)
+            imageV.loadRoundImageFromUrl(item.imageUrl)
         }
     }
 }

@@ -9,7 +9,7 @@
     <string name="email">Email</string>
     <string name="mobile">Mobile</string>
     <string name="fr_about_us_more">More IABC Events</string>
-    <string name="user_profile">User profile</string>
+    <string name="login">Login</string>
 
 
     <string name="filter_design">Design</string>
@@ -30,6 +30,12 @@
     <string name="act_company_inner_movies">Movies</string>
     <string name="act_event_inner_menu_join">Join</string>
     <string name="act_event_inner_menu_joined">Joined</string>
+
     <string name="menu_name_home">Home</string>
+    <string name="menu_name_marketplace">Marketplace</string>
+    <string name="menu_name_companies">Companies</string>
+    <string name="menu_name_events">Events</string>
+    <string name="menu_name_about">About IABC</string>
+    <string name="menu_name_f_a_q">F.A.Q</string>
 
 </resources>

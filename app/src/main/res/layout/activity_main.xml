@@ -6,9 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start"
     tools:context="iabc.com.voli.iabcandroid.ui.MainActivity"
-    >
+    tools:openDrawer="start">
 
     <include
         layout="@layout/app_bar_main"
@@ -24,17 +23,36 @@
         android:layout_gravity="start"
         android:background="@color/white"
         android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_main"
         >
 
-        <iabc.com.voli.iabcandroid.ui.custom.MenuView
-            android:id="@+id/menu_item_home"
+        <iabc.com.voli.iabcandroid.ui.custom.MenuLayout
+            android:id="@+id/main_act_menu_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:m_v_icon_src="@mipmap/home"
-            app:m_v_text="@string/menu_name_home"
+            android:orientation="vertical"
             />
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical"-->
+            <!--&gt;-->
 
+
+            <!--<iabc.com.voli.iabcandroid.ui.custom.MenuView-->
+                <!--android:id="@+id/menu_item_home"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:m_v_icon_src="@mipmap/home"-->
+                <!--app:m_v_text="@string/menu_name_home" />-->
+
+
+            <!--<iabc.com.voli.iabcandroid.ui.custom.MenuView-->
+                <!--android:id="@+id/menu_item_home_1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:m_v_icon_src="@mipmap/home"-->
+                <!--app:m_v_text="@string/menu_name_home" />-->
+        <!--</LinearLayout>-->
 
 
     </android.support.design.widget.NavigationView>

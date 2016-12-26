@@ -13,10 +13,12 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/menu_header_user_close"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/close_menu" />
+        app:srcCompat="@mipmap/close_menu"
+        android:padding="15dp"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,19 +27,22 @@
         android:gravity="center_vertical|right"
         >
         <iabc.com.voli.iabcandroid.ui.custom.CTextView
-            android:layout_width="match_parent"
+            android:id="@+id/menu_header_user_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_vertical|right"
-            android:text="@string/user_profile"
+            android:text="@string/login"
             android:textColor="@color/black"
             app:plusTextSize="@integer/plus_text_size_for_15"
             app:font_name="HELVETICA"
             />
         <ImageView
+            android:id="@+id/menu_header_user_image"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginLeft="30dp"
-            android:background="#ff00"
+            android:background="@drawable/menu_user_login_def_background"
+            android:src="@mipmap/use_login_def_image"
             />
     </LinearLayout>
 

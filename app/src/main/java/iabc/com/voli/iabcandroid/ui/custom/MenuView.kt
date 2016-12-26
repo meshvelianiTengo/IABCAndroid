@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import iabc.com.voli.iabcandroid.R
-import kotlinx.android.synthetic.main.menu_item.*
+import iabc.com.voli.iabcandroid.models.MenuItemModel
 
 /**
  * Created by Zaura on 12/26/2016.
@@ -64,6 +64,11 @@ class MenuView : LinearLayout{
         }finally {
             info.recycle()
         }
+    }
+
+    fun setContent(item: MenuItemModel){
+        textV.setText(item.name)
+        imageV.setImageResource(item.resId)
     }
 
     fun activate(){
