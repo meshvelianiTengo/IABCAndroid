@@ -18,7 +18,7 @@ class HomeFragmentInteractor {
     fun startGettingHomeFragmentDescriptions(callback: HomeFragmentInteractorDescriptionCallback) {
         val retList = ArrayList<HomeFragmentSliderModel>()
         for (i in 1..8) {
-            val item = HomeFragmentSliderModel(text="image = " + i, image= DEF_IMAGE_URL)
+            val item = HomeFragmentSliderModel(text="image = " + i)
             retList.add(item)
         }
 

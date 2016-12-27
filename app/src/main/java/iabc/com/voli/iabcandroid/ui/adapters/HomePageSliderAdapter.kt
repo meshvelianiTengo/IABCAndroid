@@ -5,10 +5,8 @@ import android.support.v4.view.PagerAdapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import iabc.com.voli.iabcandroid.R
-import iabc.com.voli.iabcandroid.loadImageFromUrl
 import iabc.com.voli.iabcandroid.models.HomeFragmentSliderModel
 
 /**
@@ -24,10 +22,7 @@ class HomePageSliderAdapter(private val context: Context, private val models: Li
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val item = models[position]
         val layout = inflater.inflate(R.layout.adapter_item_home_page_slider, container, false) as ViewGroup
-        val image = layout.findViewById(R.id.adapter_home_fr_slider_image) as ImageView
         val text = layout.findViewById(R.id.adapter_home_fr_slider_text) as TextView
-
-        image.loadImageFromUrl(item.image)
         text.text = item.text
         container.addView(layout)
         return layout

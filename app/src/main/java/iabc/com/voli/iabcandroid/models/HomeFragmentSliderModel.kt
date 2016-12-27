@@ -5,10 +5,8 @@ package iabc.com.voli.iabcandroid.models
  */
 class HomeFragmentSliderModel() : BaseModel() {
     var text = ""
-    var image = ""
 
-    constructor(text: String, image: String) : this() {
+    constructor(text: String) : this() {
         this.text = text
-        this.image = image
     }
 }

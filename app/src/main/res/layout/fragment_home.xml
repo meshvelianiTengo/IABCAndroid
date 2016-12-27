@@ -1,118 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/white"
-    android:layout_height="match_parent">
+    android:orientation="vertical">
 
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingBottom="25dp"
+        android:paddingTop="25dp"
         android:background="@color/_FAFAFA"
         >
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/home_fr_top_pager"
-            android:background="@color/_FAFAFA"
-            android:layout_above="@id/act_intro_tablayout"
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/monkey"
+            />
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingTop="25dp"
-            android:paddingBottom="25dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            />
-
-        <android.support.design.widget.TabLayout
-            android:id="@+id/home_fr_tablayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:tabBackground="@drawable/tab_selector"
-            app:tabGravity="center"
-            android:foregroundGravity="bottom"
-            app:tabIndicatorHeight="0dp"
             android:background="@color/_FAFAFA"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true" />
+            >
 
-    </RelativeLayout>
+            <android.support.v4.view.ViewPager
+                android:id="@+id/home_fr_top_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/act_intro_tablayout"
+                android:background="@color/_FAFAFA"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+
+                />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/home_fr_tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/_FAFAFA"
+                android:foregroundGravity="bottom"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="@color/white"
-        android:orientation="vertical"
-        >
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            >
+            android:layout_height="70dp">
 
             <iabc.com.voli.iabcandroid.ui.custom.CTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:plusTextSize="@integer/plus_text_size_for_16"
-                android:textColor="@color/black"
-                android:text="@string/fragment_home_ranked_movies"
                 android:layout_centerVertical="true"
                 android:paddingLeft="25dp"
+                android:text="@string/fragment_home_ranked_movies"
+                android:textColor="@color/black"
                 app:font_name="HELVETICA"
-                />
+                app:plusTextSize="@integer/plus_text_size_for_16" />
 
             <LinearLayout
                 android:id="@+id/home_fr_more"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:paddingLeft="15dp"
-                android:background="@drawable/home_fragment_gradient_background_color"
-                android:paddingRight="15dp"
-                android:orientation="horizontal"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="25dp"
-                android:minWidth="70dp"
+                android:background="@drawable/home_fragment_gradient_background_color"
                 android:gravity="center"
-                >
+                android:minWidth="70dp"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
 
                 <iabc.com.voli.iabcandroid.ui.custom.CTextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:textColor="@color/white"
-                    android:text="@string/home_fragment_more"
                     android:gravity="center"
-                    app:plusTextSize="@integer/plus_text_size_for_14"
+                    android:text="@string/home_fragment_more"
+                    android:textColor="@color/white"
                     app:font_name="HELVETICA"
-                    />
+                    app:plusTextSize="@integer/plus_text_size_for_14" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@mipmap/home_fr_more"
                     android:layout_marginLeft="8dp"
-                    />
+                    android:src="@mipmap/home_fr_more" />
 
             </LinearLayout>
 
 
-
         </RelativeLayout>
 
-        <it.moondroid.coverflow.components.ui.containers.FeatureCoverFlow
-            android:id="@+id/home_page_control_flow"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:coverHeight="@dimen/home_page_cover_height"
-            app:coverWidth="@dimen/home_page_cover_width"
-            app:maxScaleFactor="1.5"
-            app:reflectionGap="0px"
-            app:reflectionOpacity="0"
-            app:rotationThreshold="0.5"
-            app:scalingThreshold="0.5"
-            app:spacing="0.6" />
+        <!--<it.moondroid.coverflow.components.ui.containers.FeatureCoverFlow-->
+        <!--android:id="@+id/home_page_control_flow"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:coverHeight="@dimen/home_page_cover_height"-->
+        <!--app:coverWidth="@dimen/home_page_cover_width"-->
+        <!--app:maxScaleFactor="1.5"-->
+        <!--app:reflectionGap="0px"-->
+        <!--app:reflectionOpacity="0"-->
+        <!--app:rotationThreshold="0.5"-->
+        <!--app:scalingThreshold="0.5"-->
+        <!--app:spacing="0.6" />-->
     </LinearLayout>
 </LinearLayout>
