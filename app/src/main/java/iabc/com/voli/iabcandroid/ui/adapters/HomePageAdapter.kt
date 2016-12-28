@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import iabc.com.voli.iabcandroid.R
 import iabc.com.voli.iabcandroid.models.HomeFragmentMovieModel
 import iabc.com.voli.iabcandroid.ui.custom.MyLinearLayout
+import iabc.com.voli.iabcandroid.ui.fragments.HomeFragment
 
 /**
  * Created by tengo on 12/13/16.
@@ -39,7 +40,7 @@ class HomePageAdapter (private val context: Context, private val models: List<Ho
     }
 
     override fun getPageWidth(position: Int): Float {
-        return 0.3f
+        return 0.6f
     }
 
     override fun destroyItem(collection: ViewGroup, position: Int, view: Any) {
@@ -53,12 +54,22 @@ class HomePageAdapter (private val context: Context, private val models: List<Ho
     override fun transformPage(page: View, position: Float) {
         val view = page.findViewById(R.id.adapter_item_home_page_root) as MyLinearLayout
         var scale = BIG_SCALE
-        if (position > 0) {
-            scale -= position * DIFF_SCALE
-        } else {
-            scale += position * DIFF_SCALE
-        }
-        if (scale < 0) scale = 0f
+        val pagerCenter = HomeFragment.viewPagerWidth
+
+//        var minPosition = pagerCenter - view.width
+//        var maxPosition = pagerCenter + view.width
+//        if(position > maxPosition){
+//            scale = SMALL_SCALE
+//        }else if(position < minPosition){
+//            scale = SMALL_SCALE
+//        }else{
+//            val difFromCenter = Math.abs(pagerCenter - position)
+//            val percent = 1f * difFromCenter / view.width
+            scale = BIG_SCALE - (DIFF_SCALE * Math.abs(position))
+
+//        }
+
+        print("saati aris es ")
 
         view.setScaleBoth(scale)
     }

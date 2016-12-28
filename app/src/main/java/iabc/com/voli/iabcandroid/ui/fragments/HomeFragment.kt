@@ -1,14 +1,17 @@
 package iabc.com.voli.iabcandroid.ui.fragments
 
 import android.os.Bundle
+import android.support.v4.view.ViewPager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import iabc.com.voli.iabcandroid.R
+import iabc.com.voli.iabcandroid.afterMeasured
 import iabc.com.voli.iabcandroid.makeToast
 import iabc.com.voli.iabcandroid.models.HomeFragmentMovieModel
 import iabc.com.voli.iabcandroid.models.HomeFragmentSliderModel
 import iabc.com.voli.iabcandroid.presenter.HomeFragmentPresenter
+import iabc.com.voli.iabcandroid.ui.adapters.HomePageAdapter
 import iabc.com.voli.iabcandroid.ui.adapters.HomePageSliderAdapter
 import iabc.com.voli.iabcandroid.view.HomeFragmentView
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -17,7 +20,11 @@ import kotlinx.android.synthetic.main.fragment_home.*
 /**
  * Created by tengo on 12/13/16.
  */
-class HomeFragment : BaseFragment(), HomeFragmentView{
+class HomeFragment : BaseFragment(), HomeFragmentView {
+
+    companion object {
+        var viewPagerWidth = 0
+    }
 
     val presenter: HomeFragmentPresenter
 
@@ -48,6 +55,31 @@ class HomeFragment : BaseFragment(), HomeFragmentView{
     }
 
     override fun onMoviesResponse(list: List<HomeFragmentMovieModel>) {
+        val adapter = HomePageAdapter(context, list)
+//        home_fr_movie_pager.pageMargin = 30
+        home_fr_movie_pager.afterMeasured {
+            val width = home_fr_movie_pager.width
+            if (width > 0) {
+                val padding = width * 3 / 8
+                home_fr_movie_pager.setPadding(padding, 0, padding, 0)
+                viewPagerWidth = width
+            }
+        }
+        home_fr_movie_pager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+            override fun onPageScrollStateChanged(state: Int) {
+
+            }
+
+            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
+            }
+
+            override fun onPageSelected(position: Int) {
+
+            }
+        })
+
+        home_fr_movie_pager.adapter = adapter
+        home_fr_movie_pager.setPageTransformer(false, adapter);
 //        val adapter = ControlFlowAdapter(context, list)
 //        home_page_control_flow.adapter = adapter
 //        home_fr_movie_pager.setPageTransformer(true, adapter)
@@ -61,7 +93,7 @@ class HomeFragment : BaseFragment(), HomeFragmentView{
 
     //override func end
 
-    fun onMoreClicked(){
+    fun onMoreClicked() {
         throw UnsupportedOperationException("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 

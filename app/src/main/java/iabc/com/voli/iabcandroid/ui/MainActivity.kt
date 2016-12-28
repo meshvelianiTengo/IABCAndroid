@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity(), MainActView, MenuLayout.OnMenuAction {
     override fun onMenuItemLoaded(list: List<MenuItemModel>) {
         main_act_menu_view.initContent(list)
         main_act_menu_view.menuActionCallback = this
-//        presenter.onMenuItemChosen(0)
+        presenter.onMenuItemChosen(0)
     }
 
     override fun onUserLoaded(user: IABCUser) {
@@ -68,6 +68,7 @@ class MainActivity : AppCompatActivity(), MainActView, MenuLayout.OnMenuAction {
     }
 
     override fun onChangeFragment(fragment: Fragment) {
+        closeMenu()
         changeFragment(R.id.content_main, fragment)
     }
 

@@ -111,6 +111,13 @@
 
         </RelativeLayout>
 
+        <android.support.v4.view.ViewPager
+            android:id="@+id/home_fr_movie_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            />
+
         <!--<it.moondroid.coverflow.components.ui.containers.FeatureCoverFlow-->
         <!--android:id="@+id/home_page_control_flow"-->
         <!--android:layout_width="match_parent"-->
