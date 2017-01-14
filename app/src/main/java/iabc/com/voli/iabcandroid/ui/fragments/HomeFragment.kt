@@ -1,7 +1,6 @@
 package iabc.com.voli.iabcandroid.ui.fragments
 
 import android.os.Bundle
-import android.support.v4.view.ViewPager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,6 +23,7 @@ class HomeFragment : BaseFragment(), HomeFragmentView {
 
     companion object {
         var viewPagerWidth = 0
+        var movieCount = 5
     }
 
     val presenter: HomeFragmentPresenter
@@ -55,6 +55,7 @@ class HomeFragment : BaseFragment(), HomeFragmentView {
     }
 
     override fun onMoviesResponse(list: List<HomeFragmentMovieModel>) {
+        movieCount = list.size
         val adapter = HomePageAdapter(context, list)
 //        home_fr_movie_pager.pageMargin = 30
         home_fr_movie_pager.afterMeasured {
@@ -65,21 +66,12 @@ class HomeFragment : BaseFragment(), HomeFragmentView {
                 viewPagerWidth = width
             }
         }
-        home_fr_movie_pager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
-            override fun onPageScrollStateChanged(state: Int) {
 
-            }
-
-            override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
-            }
-
-            override fun onPageSelected(position: Int) {
-
-            }
-        })
-
+//        home_fr_top_pager.offscreenPageLimit = 3* movieCount
         home_fr_movie_pager.adapter = adapter
         home_fr_movie_pager.setPageTransformer(false, adapter);
+        home_fr_movie_pager.setCurrentItem(10000, true)
+        home_fr_movie_pager.scrollTo(home_fr_movie_pager.scrollX, 0)
 //        val adapter = ControlFlowAdapter(context, list)
 //        home_page_control_flow.adapter = adapter
 //        home_fr_movie_pager.setPageTransformer(true, adapter)

@@ -4,6 +4,7 @@ import iabc.com.voli.iabcandroid.interactor_presenter_callbacks.HomeFragmentInte
 import iabc.com.voli.iabcandroid.interactor_presenter_callbacks.HomeFragmentInteractorMoviesCallback
 import iabc.com.voli.iabcandroid.models.HomeFragmentMovieModel
 import iabc.com.voli.iabcandroid.models.HomeFragmentSliderModel
+import iabc.com.voli.iabcandroid.ui.fragments.HomeFragment
 import java.util.*
 
 /**
@@ -26,7 +27,7 @@ class HomeFragmentInteractor {
     }
 
     fun startGettingHomeFragmentRankedMovies(callback: HomeFragmentInteractorMoviesCallback){
-        val retList = (1..8).map { HomeFragmentMovieModel(image= DEF_IMAGE_URL, title = "title = " + it) }
+        val retList = (1..HomeFragment.movieCount).map { HomeFragmentMovieModel(image= DEF_IMAGE_URL, title = "title = " + it) }
         callback.onMoviesDownloaded(retList)
     }
 }
